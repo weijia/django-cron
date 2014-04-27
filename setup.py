@@ -30,7 +30,7 @@ setup(
     keywords='django cron',
     zip_safe=False,
     install_requires=[
-        'Django>=1.5.0',
+        'Django>=1.4.0',
         'South>=0.8.1',
         'django-common-helpers>=0.5.1'
     ],

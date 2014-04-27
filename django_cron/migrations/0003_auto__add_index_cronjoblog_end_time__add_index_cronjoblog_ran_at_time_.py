@@ -37,7 +37,9 @@ class Migration(SchemaMigration):
 
     models = {
         u'django_cron.cronjoblog': {
-            'Meta': {'object_name': 'CronJobLog', 'index_together': "[('code', 'is_success', 'ran_at_time'), ('code', 'start_time', 'ran_at_time'), ('code', 'start_time')]"},
+            'Meta': {'object_name': 'CronJobLog',
+                     #'index_together': "[('code', 'is_success', 'ran_at_time'), ('code', 'start_time', 'ran_at_time'), ('code', 'start_time')]"
+            },
             'code': ('django.db.models.fields.CharField', [], {'max_length': '64', 'db_index': 'True'}),
             'end_time': ('django.db.models.fields.DateTimeField', [], {'db_index': 'True'}),
             u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
